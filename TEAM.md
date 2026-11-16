@@ -2,17 +2,17 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: NhomNhomNhom
 - Lớp: L3A
-- Repo nhóm: `K5-L3A-DAY08-TenNhom-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt:
+- Repo nhóm: `K5-L3A-DAY08-NhomNhomNhom-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
+- URL repo, nhánh nộp, commit chốt: main
 
 ## Thành viên
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 |        |      |       |        |         |
-|   2 |        |      |       |        |         |
+|   2 | Nguyễn Hoàng Việt | 03487 | hoangviet1824qsqn@gmail.com | HViettt | Single Agent & ReAct Loop |
 
 Gợi ý chia vai:
 
@@ -25,7 +25,7 @@ Gợi ý chia vai:
 
 | Người | Vai | Commit | Test đã thêm hoặc sửa |
 | --- | --- | --- | --- |
-| | | | |
+| Nguyễn Hoàng Việt | Single Agent & ReAct | 76f2ec1 | test_single_agent_worker_cannot_call_write_tools, test_single_agent_prompt_injection_resistant, test_single_agent_order_already_refunded_cap, test_single_agent_trace_is_clean_and_valid |
 
 ## Cá nhân
 
@@ -39,16 +39,22 @@ Ví dụ: `report/team/20241234_NguyenVanAn.md`.
 
 Sao chép mục dưới đây cho từng thành viên.
 
-## MSSV_HoTen
+## 03487_NguyenHoangViet
 
 ### Phần việc phụ trách
 
--
+- Cài đặt và tối ưu Shape B: Single Agent (`src/lab8/shapes/single.py`).
+- Kiểm soát vòng lặp ReAct có chặn trên (`max_steps=8`), cô lập quyền hạn của Worker qua `READONLY_TOOLS`.
+- Đảm bảo ranh giới an toàn cho Model: không bị dẫn dắt bởi prompt injection trong ticket, chỉ tin tưởng order ground-truth.
+- Xử lý tích hợp trần hoàn tiền đơn hàng (per-order cap) và độ bền idempotency/crash (`issue_refund`).
+- Viết test suite chuyên biệt cho Single Agent (`src/tests/test_single_agent_tv2.py`).
 
 ### Đóng góp cụ thể
 
--
+- Commit: `76f2ec1` (feat(single): implement bounded ReAct single agent and safety tests)
+- Tests: `test_single_agent_worker_cannot_call_write_tools`, `test_single_agent_prompt_injection_resistant`, `test_single_agent_trace_is_clean_and_valid`, `test_single_agent_order_already_refunded_cap` (100% pass trên 62 test cases student của Single Agent).
 
 ### Bằng chứng
 
--
+- Commit hash: `76f2ec1`
+- Test files: `src/tests/test_single_agent_tv2.py`
