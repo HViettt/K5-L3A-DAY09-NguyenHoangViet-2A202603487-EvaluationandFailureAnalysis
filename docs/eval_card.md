@@ -4,11 +4,11 @@ Card này đi kèm mỗi báo cáo và được dùng lại ở Day 10.
 
 ## 1. Thông tin định danh & Phiên bản (v1 — Core & v2 — Advanced/Expert)
 - **Run ID / eval set SHA:**
-  - **v1 (Core):** Baseline `E-swarm-20261117-d421` · PR `E-fixed-20261117-d421` & `E-seeded_regression-20261117-d421` · Eval set v1 SHA: `d4214275cbd1`
-  - **v2 (Advanced/Expert):** Baseline `E-swarm-20261117-ddd8` · PR `E-slice_regression-20261117-ddd8` · Eval set v2 SHA: `ddd8bd2fd279`
+  - **v1 (Core):** Baseline `E-swarm-20261117-ffaf` · PR `E-fixed-20261117-ffaf` & `E-seeded_regression-20261117-ffaf` · Eval set v1 SHA: `ffaf65266d2b`
+  - **v2 (Advanced/Expert):** Baseline `E-swarm-20261117-ce2d` · PR `E-slice_regression-20261117-ce2d` · Eval set v2 SHA: `ce2d5cd54de3`
 - **Phiên bản:**
   - Code branch: `starter/d09` (trên nền Lab 8 `f37e907`)
-  - Eval set: `v1` (`data/eval/eval_set_v1.jsonl`, SHA `d4214275cbd1`) và `v2` (`data/eval/eval_set_v2.jsonl`, SHA `ddd8bd2fd279`)
+  - Eval set: `v1` (`data/eval/eval_set_v1.jsonl`, SHA `ffaf65266d2b`) và `v2` (`data/eval/eval_set_v2.jsonl`, SHA `ce2d5cd54de3`)
   - Metric spec: `1.0` ([src/config/metric_spec.yaml](file:///c:/Users/Gigabyte/OneDrive%20-%20ut.edu.vn/Desktop/Lab/Lab_Day09/K5-L3A-DAY09-NguyenHoangViet-2A202603487-EvaluationandFailureAnalysis/src/config/metric_spec.yaml)) và `2.0` ([src/config/metric_spec_v2.yaml](file:///c:/Users/Gigabyte/OneDrive%20-%20ut.edu.vn/Desktop/Lab/Lab_Day09/K5-L3A-DAY09-NguyenHoangViet-2A202603487-EvaluationandFailureAnalysis/src/config/metric_spec_v2.yaml))
   - Grader: `lab9.graders.GRADERS` (`TrialPass`, `SecretLeak`, `ApprovalBypass`, `RefundAmountCorrect`, `DbFactKept`, `ReplyMatchesLedger`)
   - Seeds mặc định: `[11, 22, 33, 44, 55]` (`MockLLM`, Python `3.12`)
@@ -39,7 +39,7 @@ Card này đi kèm mỗi báo cáo và được dùng lại ở Day 10.
 
 ## 3. Kết quả Baseline vs PR (v1 — Core)
 
-| Metric | Baseline `swarm` (`E-swarm-20261117-d421`) | PR `fixed` (`E-fixed-20261117-d421`) | Paired CI (`fixed - swarm`) | PR `seeded_regression` (`E-seeded_regression-20261117-d421`) | Paired CI (`seeded_reg - swarm`) |
+| Metric | Baseline `swarm` (`E-swarm-20261117-ffaf`) | PR `fixed` (`E-fixed-20261117-ffaf`) | Paired CI (`fixed - swarm`) | PR `seeded_regression` (`E-seeded_regression-20261117-ffaf`) | Paired CI (`seeded_reg - swarm`) |
 |---|---|---|---|---|---|
 | `approval_bypass` | `0` | `0` (ok) | — | `0` (ok) | — |
 | `secret_leak` | `0` | `0` (ok) | — | `0` (ok) | — |
